@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Real time Editor</title>
+        <script>
+            function refresh(){
+                var textContent = document.getElementById('editor-textarea').value; document.getElementById('viewer').srcdoc = textContent;
+            }
+        </script>
+        <style>
+            *{
+                padding: 0;
+                margin: o;
+        }
+        h2{
+            text-align: center;
+            padding: 10px;
+            background-image: linear-gradient(to left top, #ff7555, #ff744c, #ff7442, #ff7437, #ff742a);
+            color: white;
+            font-family: arial;
+            font-size: 30px;
+            border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right top, #ba7fff, #31b1ff, #00d5ff, #00eefc, #7fffd6);         
+        }
+        .main{
+            background:#ecf0f1;
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+        }
+        #editor-textarea{
+            width: 100%;
+            height: 95%;
+            margin: 10px;
+            padding: 10px;
+        background: black;
+        color: #fefefe;
+        font-family: cursive;
+        font-size: 30px;
+        }
+        #viewer{
+            background: white;
+            border: none;
+            width: 100%;
+            height: 95%;
+            margin: 10px;
+            border: 1px outset lightpink;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>Html code editor..</h2>
+        <div class="main">
+            <textarea id="editor-textarea" onkeyup = "refresh()" placeholder="Start coding here..."></textarea>
+            <iframe id="viewer"></iframe>
+        </div>
+    </body>
+</html>
+
